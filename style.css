@@ -1,0 +1,1349 @@
+:root {
+  --yellow: #5bc0eb;
+  --red: #d4202b;
+  --ink: #2b1a0e;
+  --white: #fff;
+  --cream: #fff6dc;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Noto Sans Thai", sans-serif;
+  background: var(--yellow);
+  color: var(--ink);
+  min-height: 100vh;
+  line-height: 1.7;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* header */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 40px 0;
+  position: relative;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo-badge {
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  background: var(--red);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 5px #f26b72 inset,
+    0 3px 0 rgba(0, 0, 0, 0.15);
+}
+.logo-badge svg {
+  width: 32px;
+  height: 32px;
+  fill: #fff;
+}
+.logo-text {
+  font-family: "Mitr", sans-serif;
+  font-weight: 600;
+  font-size: 1.65rem;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 2px 0 rgba(43, 26, 14, 0.35);
+}
+.nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+.nav a {
+  font-weight: 500;
+  padding: 6px 0;
+  border-bottom: 3px solid transparent;
+}
+.nav a:hover,
+.nav a[aria-current="page"] {
+  border-color: var(--ink);
+}
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+}
+.menu-toggle span,
+.menu-toggle span::before,
+.menu-toggle span::after {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: var(--ink);
+  border-radius: 2px;
+  position: relative;
+  margin: auto;
+}
+.menu-toggle span::before {
+  position: absolute;
+  top: -8px;
+  left: 0;
+}
+.menu-toggle span::after {
+  position: absolute;
+  top: 8px;
+  left: 0;
+}
+
+/* buttons */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.btn {
+  font-family: "Mitr", sans-serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  padding: 13px 28px;
+  border-radius: 999px;
+  border: 3px solid var(--ink);
+  transition:
+    transform 0.15s,
+    background 0.15s;
+}
+.btn-primary {
+  background: var(--ink);
+  color: #fff;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: #46301f;
+}
+.btn-ghost:hover {
+  background: rgba(43, 26, 14, 0.1);
+}
+
+/* home hero */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 40px;
+  padding: 50px 40px 80px;
+  min-height: calc(100vh - 110px);
+}
+h1 {
+  font-family: "Mitr", sans-serif;
+  font-weight: 600;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.3;
+  color: #fff;
+  text-shadow: 0 3px 0 rgba(43, 26, 14, 0.3);
+}
+.hero h1 {
+  margin-bottom: 26px;
+}
+.hero p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  max-width: 34em;
+  margin-bottom: 34px;
+}
+.hero-art {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.hero-art img {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+}
+.shadow {
+  position: absolute;
+  bottom: 6%;
+  width: 70%;
+  height: 34px;
+  background: rgba(120, 70, 0, 0.28);
+  border-radius: 50%;
+  filter: blur(14px);
+}
+
+/* inner pages */
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 40px 90px;
+}
+.page-intro {
+  max-width: 40em;
+  font-size: 1.1rem;
+  margin: 18px 0 44px;
+}
+h2 {
+  font-family: "Mitr", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+.section-title {
+  font-size: 1.8rem;
+  color: #fff;
+  text-shadow: 0 2px 0 rgba(43, 26, 14, 0.3);
+  margin: 56px 0 20px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 22px;
+}
+.card {
+  background: var(--cream);
+  border-radius: 22px;
+  padding: 26px;
+  border: 3px solid var(--ink);
+}
+.card p {
+  font-size: 0.98rem;
+}
+.tag {
+  display: inline-block;
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 2px 12px;
+  border-radius: 999px;
+  margin: 0 6px 10px 0;
+}
+.card dl {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+.card dt {
+  font-weight: 500;
+}
+.card dd {
+  margin-bottom: 8px;
+}
+.avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--red);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-family: "Mitr", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--cream);
+  border: 3px solid var(--ink);
+  border-radius: 18px;
+  overflow: hidden;
+}
+th,
+td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 2px solid rgba(43, 26, 14, 0.2);
+  vertical-align: top;
+}
+th {
+  background: var(--ink);
+  color: #fff;
+  font-weight: 500;
+}
+tr:last-child td {
+  border-bottom: 0;
+}
+.table-wrap {
+  overflow-x: auto;
+}
+.warn {
+  background: var(--red);
+  color: #fff;
+  border-color: var(--ink);
+}
+.warn h2 {
+  color: #fff;
+}
+.site-footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 0.9rem;
+  border-top: 3px solid rgba(43, 26, 14, 0.2);
+}
+
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 24px;
+    right: 24px;
+    z-index: 10;
+    background: #fff;
+    border-radius: 20px;
+    padding: 16px 24px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  }
+  .nav.open {
+    display: block;
+  }
+  .nav ul {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .nav a {
+    display: block;
+    padding: 10px 0;
+    border: 0;
+  }
+  .site-header {
+    padding: 18px 24px 0;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 30px 24px 60px;
+    min-height: 0;
+  }
+  .hero-art {
+    order: -1;
+  }
+  .hero-art svg {
+    max-width: 380px;
+  }
+  .page {
+    padding: 40px 24px 70px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .btn {
+    transition: none;
+  }
+}
+
+/* popular breeds (home) */
+.popular {
+  background: #fff;
+  padding: 80px 40px 90px;
+}
+.popular-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.popular .section-title {
+  color: var(--ink);
+  text-shadow: none;
+  margin-top: 0;
+}
+.popular .grid {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+.popular h3 {
+  font-family: "Mitr", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+.popular-actions {
+  margin-top: 44px;
+}
+@media (max-width: 900px) {
+  .popular {
+    padding: 56px 24px 70px;
+  }
+}
+
+.breed-card {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+.card-img {
+  flex: 0 0 250px;
+}
+
+.card-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-content h3 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.card-content p {
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+/* รองรับหน้าจอมือถือ */
+@media (max-width: 600px) {
+  .breed-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .card-img {
+    flex: auto;
+  }
+
+  .card-img img {
+    height: auto;
+  }
+}
+
+/* รูปภาพในการ์ดสายพันธุ์ */
+.breed-photo {
+  display: block;
+  width: 30%;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+/* จัดการ์ดให้สูงเท่ากัน */
+.breed-item {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+}
+
+/* เว้นระยะระหว่างข้อความ */
+.breed-item h2 {
+  margin-bottom: 8px;
+}
+
+.breed-item p {
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+/* มือถือ */
+@media (max-width: 600px) {
+  .breed-photo {
+    height: 200px;
+  }
+}
+
+/* จัดหัวข้อและคำอธิบายให้อยู่ตรงกลาง */
+.page h1,
+.page .page-intro {
+  text-align: center;
+}
+
+/* จัดเนื้อหาหน้าสุนัขพันธุ์เล็กให้อยู่ตรงกลาง */
+.page {
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.page h1 {
+  text-align: center;
+}
+
+.page .page-intro {
+  max-width: 600px;
+  margin: 0 auto 24px;
+  text-align: center;
+}
+
+/* พื้นที่รวมการ์ด */
+.dog-list {
+  max-width: 1500px;
+  margin: 40px auto;
+  padding: 0 35px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* กรอบใหญ่ของสุนัขแต่ละตัว */
+.dog-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 24px;
+  background: #fff4d8;
+  border: 2px solid #4a3024;
+  border-radius: 22px;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* กรอบรูปด้านซ้าย */
+.dog-card img {
+  width: 38%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+
+/* เนื้อหาด้านขวา */
+.dog-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.dog-info h2 {
+  font-size: 1.35rem;
+  margin: 0 0 12px;
+}
+
+.dog-info h3 {
+  font-size: 1rem;
+  margin: 16px 0 6px;
+}
+
+.dog-info p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin: 0 0 10px;
+}
+
+/* แท็บเล็ตและมือถือ */
+@media (max-width: 900px) {
+  .dog-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .dog-list {
+    padding: 0 16px;
+  }
+
+  .dog-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 18px;
+  }
+
+  .dog-card img {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+/* ย้ายปุ่มหน้าถัดไปไปทางขวา */
+.popular-actions {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 30px;
+}
+
+/* พื้นที่รวมกรอบผู้จัดทำ */
+.team-list {
+  width: calc(100% - 60px);
+  max-width: 1450px;
+  margin: 45px auto 60px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* กรอบสีขาว */
+.team-card {
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 22px;
+  padding: 24px;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 0 6px 18px rgba(30, 75, 95, 0.12);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* เอฟเฟกต์เมื่อชี้การ์ด */
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(30, 75, 95, 0.2);
+}
+
+/* รูปผู้จัดทำ */
+.team-photo {
+  display: block;
+  width: 180px;
+  height: 180px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  border: 4px solid #5bc0e4;
+}
+
+/* ชื่อผู้จัดทำ */
+.team-info h2 {
+  color: #263746;
+  font-size: 1.25rem;
+  margin: 0 0 12px;
+}
+
+/* รายละเอียด */
+.team-info p {
+  color: #52616b;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin: 6px 0;
+}
+
+/* แท็บเล็ต */
+@media (max-width: 950px) {
+  .team-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* มือถือ */
+@media (max-width: 600px) {
+  .team-list {
+    width: calc(100% - 32px);
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .team-card {
+    padding: 22px;
+  }
+
+  .team-photo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.page-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 30px 0;
+}
+
+.card {
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.hero-img {
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+} /* เลื่อนหน้าลื่น ๆ */
+
+/* ช่องค้นหาสายพันธุ์สุนัข */
+.dog-search {
+  max-width: 600px;
+  margin: 0 auto 24px;
+  padding: 16px;
+}
+
+.dog-search input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 18px;
+  border: 2px solid var(--yellow);
+  border-radius: 14px;
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+  outline: none;
+}
+
+.dog-search input:focus {
+  border-color: var(--ink);
+}
+
+#dogSearchResult {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+}
+
+.dog-card.search-hidden {
+  display: none !important;
+}
+
+/* ปุ่มสลับ Dark Mode */
+.theme-toggle {
+  display: block;
+  margin: 12px 20px 16px auto;
+  padding: 10px 16px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--cream);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.25s,
+    color 0.25s;
+}
+
+.theme-toggle:hover {
+  opacity: 0.85;
+}
+
+/* สีของโหมดมืด */
+body.dark-mode {
+  --cream: #20242b;
+  --ink: #f5f5f5;
+  --yellow: #f4c95d;
+  --white: #2c313a;
+
+  background: #171a20;
+  color: #f5f5f5;
+}
+
+body.dark-mode .dog-card,
+body.dark-mode .breed-card {
+  background: #252a33;
+  color: #f5f5f5;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background: #2c313a;
+  color: #f5f5f5;
+}
+
+/* แก้สีข้อความที่มองไม่เห็นใน Dark Mode */
+body.dark-mode .popular,
+body.dark-mode .popular-inner,
+body.dark-mode .page,
+body.dark-mode main {
+  color: #f5f5f5;
+}
+
+body.dark-mode .popular h1,
+body.dark-mode .popular h2,
+body.dark-mode .popular h3,
+body.dark-mode .popular p,
+body.dark-mode .page h1,
+body.dark-mode .page h2,
+body.dark-mode .page h3,
+body.dark-mode .page p {
+  color: #f5f5f5;
+}
+
+/* เปลี่ยนพื้นหลังส่วนเนื้อหาให้เข้ากับ Dark Mode */
+body.dark-mode .popular {
+  background: #171a20;
+}
+
+body.dark-mode .popular .dog-card,
+body.dark-mode .popular .breed-card,
+body.dark-mode .dog-card,
+body.dark-mode .breed-card {
+  background: #252a33;
+  color: #f5f5f5;
+}
+
+body.dark-mode .dog-card *,
+body.dark-mode .breed-card * {
+  color: #f5f5f5;
+}
+
+/* แก้สีข้อความในปุ่มเมื่อเปิด Dark Mode */
+body.dark-mode button,
+body.dark-mode .btn,
+body.dark-mode .btn-primary,
+body.dark-mode .btn-ghost,
+body.dark-mode .theme-toggle {
+  color: #ffffff;
+}
+
+/* ปุ่มพื้นหลังสว่าง ให้ใช้ข้อความสีเข้ม */
+body.dark-mode .btn-primary,
+body.dark-mode .btn-ghost {
+  background-color: #303640;
+  color: #ffffff;
+  border-color: #f5f5f5;
+}
+
+/* ปุ่มสลับโหมด */
+body.dark-mode .theme-toggle {
+  background-color: #303640;
+  color: #ffffff;
+  border-color: #f5f5f5;
+}
+
+/* ข้อความในปุ่มลิงก์ */
+body.dark-mode a.btn,
+body.dark-mode a.btn-primary,
+body.dark-mode a.btn-ghost {
+  color: #ffffff;
+}
+
+/* แก้ปุ่มเลือกขนาดสุนัขในหน้า Home */
+body.dark-mode .actions .btn,
+body.dark-mode .popular-actions .btn,
+body.dark-mode .page-navi .btn {
+  color: #222222 !important;
+  background-color: #f5f5f5 !important;
+  border: 2px solid #f5f5f5;
+}
+
+/* ปุ่มที่เป็นขอบโปร่งใส */
+body.dark-mode .actions .btn-ghost,
+body.dark-mode .popular-actions .btn-ghost,
+body.dark-mode .page-navi .btn-ghost {
+  color: #ffffff !important;
+  background-color: transparent !important;
+  border-color: #ffffff !important;
+}
+
+/* แก้ข้อความป้ายพันธุ์สุนัขใน Dark Mode */
+body.dark-mode .tag {
+  background-color: #f5f5f5 !important;
+  color: #222222 !important;
+  border-color: #f5f5f5 !important;
+}
+
+/* กรณีข้อความในป้ายมี element ลูก */
+body.dark-mode .tag * {
+  color: #222222 !important;
+}
+
+/* ===== เอฟเฟกต์การ์ดสุนัข ===== */
+
+/* ทำให้การ์ดยกตัวอย่างนุ่มนวล */
+.dog-card,
+.breed-card {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* ยกการ์ดขึ้นเมื่อชี้เมาส์ */
+.dog-card:hover,
+.breed-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ซ่อนส่วนเกินเพื่อไม่ให้รูปขยายล้นกรอบ */
+.dog-card img,
+.breed-card img {
+  transition: transform 0.3s ease;
+}
+
+/* ขยายรูปเล็กน้อยเมื่อชี้การ์ด */
+.dog-card:hover img,
+.breed-card:hover img {
+  transform: scale(1.04);
+}
+
+/* รองรับมือถือและผู้ใช้ที่ลดการเคลื่อนไหว */
+@media (prefers-reduced-motion: reduce) {
+  .dog-card,
+  .breed-card,
+  .dog-card img,
+  .breed-card img {
+    transition: none;
+  }
+
+  .dog-card:hover,
+  .breed-card:hover,
+  .dog-card:hover img,
+  .breed-card:hover img {
+    transform: none;
+  }
+}
+.dog-card img,
+.breed-card img {
+  max-width: 100%;
+}
+
+.dog-card .dog-info,
+.breed-card .dog-info {
+  min-width: 0;
+}
+
+/* ปุ่มหัวใจบันทึกสายพันธุ์โปรด */
+.favorite-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #777777;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.12);
+}
+
+.favorite-btn.is-favorite {
+  color: #e63946;
+}
+
+.dog-card,
+.breed-card {
+  position: relative;
+}
+
+.favorite-btn:focus-visible {
+  outline: 3px solid #5bc0eb;
+  outline-offset: 3px;
+}
+
+/* ปุ่มหัวใจสุนัขโปรด */
+.dog-card,
+.breed-card {
+  position: relative;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  color: #777;
+  font-size: 25px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.1);
+}
+
+.favorite-btn.is-favorite {
+  color: #e63946;
+}
+
+.favorite-btn:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 3px;
+}
+
+/* หน้ารวมสุนัขโปรด */
+.favorites-page {
+  width: min(1300px, 95%);
+  margin: 0 auto;
+  padding: 24px 0 48px;
+}
+
+.favorites-page .page-heading {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+#favoritesCount {
+  font-weight: 600;
+}
+
+#favoritesEmpty {
+  text-align: center;
+  padding: 32px 16px;
+  border: 2px dashed var(--yellow);
+  border-radius: 16px;
+  margin: 20px auto;
+}
+
+#favoritesEmpty[hidden] {
+  display: none;
+}
+
+/* ปุ่มหัวใจ: ให้เห็นชัดทุกโหมด */
+.favorite-btn {
+  background: #ffffff !important;
+  color: #9aa0a6 !important; /* หัวใจที่ยังไม่ได้กด: สีเทา */
+}
+
+.favorite-btn.is-favorite {
+  color: #e63946 !important; /* หัวใจที่กดแล้ว: สีแดง */
+}
+
+/* ===== หน้าแบบทดสอบหาสายพันธุ์สุนัขที่เหมาะกับคุณ ===== */
+.quiz-page {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+  padding: 48px 0 80px;
+}
+
+.quiz-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.quiz-heading h1 {
+  margin-bottom: 12px;
+}
+
+.quiz-heading p {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.quiz-form {
+  display: grid;
+  gap: 20px;
+}
+
+.quiz-question {
+  background: var(--cream);
+  border: 3px solid var(--ink);
+  border-radius: 20px;
+  padding: 24px;
+  min-width: 0;
+}
+
+.quiz-question h2 {
+  margin-bottom: 14px;
+}
+
+.quiz-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 2px solid rgba(43, 26, 14, 0.25);
+  border-radius: 12px;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    border-color 0.15s;
+}
+
+.quiz-option:has(input:checked) {
+  background: #d9f2fc;
+  border-color: #1685ad;
+}
+
+.quiz-option input {
+  margin-top: 7px;
+  accent-color: #1685ad;
+  flex: 0 0 auto;
+}
+
+.quiz-submit {
+  justify-self: center;
+  cursor: pointer;
+}
+
+.quiz-error {
+  text-align: center;
+  color: #a10f19;
+  font-weight: 600;
+}
+
+.quiz-results {
+  margin-top: 42px;
+}
+
+.quiz-results h2 {
+  color: #fff;
+  text-shadow: 0 2px 0 rgba(43, 26, 14, 0.3);
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.quiz-result-intro {
+  margin-bottom: 20px;
+}
+
+.quiz-result-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.quiz-result-card {
+  background: var(--cream);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.quiz-result-card h3 {
+  font-family: "Mitr", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.quiz-result-card .quiz-score {
+  display: inline-block;
+  border-radius: 999px;
+  background: #d9f2fc;
+  padding: 3px 11px;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.quiz-result-card p {
+  margin-bottom: 12px;
+}
+
+.quiz-result-card a {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.quiz-note {
+  font-size: 0.9rem;
+  margin-top: 18px;
+  opacity: 0.9;
+}
+
+/* รองรับโหมดกลางคืน */
+body.dark-mode .quiz-question,
+body.dark-mode .quiz-result-card {
+  background: #252a33;
+  color: #f5f5f5;
+}
+
+body.dark-mode .quiz-option:has(input:checked) {
+  background: #24404a;
+  border-color: #5bc0eb;
+}
+
+body.dark-mode .quiz-results h2 {
+  color: #fff;
+}
+
+/* รองรับหน้าจอมือถือ */
+@media (max-width: 650px) {
+  .quiz-page {
+    padding-top: 32px;
+  }
+
+  .quiz-question {
+    padding: 18px;
+  }
+
+  .quiz-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ปุ่มค้นหาสายพันธุ์ที่เหมาะกับคุณ */
+.btn-quiz {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  background: #fff5df;
+  color: #2b1a0e;
+  border: 2px solid #2b1a0e;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-quiz:hover {
+  background: #2b1a0e;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 0 rgba(43, 26, 14, 0.2);
+}
+
+@media (max-width: 650px) {
+  .btn-quiz {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
+
+/* ปุ่มค้นหาสายพันธุ์ด้านบน */
+.hero-quiz {
+  margin-bottom: 20px;
+}
+
+.hero-quiz .btn-quiz {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 30px;
+  background: #fff0b8;
+  color: #2b1a0e;
+  border: 3px solid #2b1a0e;
+  border-radius: 18px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 6px 0 #2b1a0e;
+  transition: 0.2s ease;
+}
+
+.hero-quiz .btn-quiz:hover {
+  background: #ffe28a;
+  transform: translateY(-3px);
+}
+
+/* ปุ่มเล็ก กลาง ใหญ่ เรียงแนวนอน */
+.hero-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+/* ปุ่มทั้งสามขนาด */
+.hero-buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* ปุ่มสายพันธุ์กลาง */
+.hero-buttons a:nth-child(2) {
+  background: transparent;
+  color: #2b1a0e;
+  border: 3px solid #2b1a0e;
+}
+
+.hero-buttons a:nth-child(2):hover {
+  background: #fff0b8;
+}
+
+/* มือถือให้ปุ่มปรับขนาดตามพื้นที่ */
+@media (max-width: 650px) {
+  .hero-buttons {
+    gap: 10px;
+  }
+
+  .hero-buttons a {
+    white-space: normal;
+  }
+}
+
+/* ปุ่มค้นหาสายพันธุ์: สีน้ำตาลเข้ม */
+.hero-quiz .btn-quiz {
+  background: #2b1a0e;
+  color: #ffffff;
+  border: 3px solid #2b1a0e;
+  border-radius: 999px;
+  box-shadow: none;
+}
+
+.hero-quiz .btn-quiz:hover {
+  background: #493020;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* ปุ่มเลือกสายพันธุ์เล็ก กลาง ใหญ่ */
+.hero-buttons a {
+  background: transparent;
+  color: #2b1a0e;
+  border: 3px solid #2b1a0e;
+  border-radius: 999px;
+  box-shadow: none;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* ให้ทั้งสามปุ่มมีสไตล์เหมือนกัน */
+.hero-buttons a:hover {
+  background: #fff0b8;
+  color: #2b1a0e;
+  transform: translateY(-3px);
+}

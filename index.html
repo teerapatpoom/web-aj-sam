@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>หน้าแรก | Good Good Dog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600&family=Noto+Sans+Thai:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="index.html">
+    <div id="site-header"></div>
+
+    <button
+      id="themeToggle"
+      class="theme-toggle"
+      type="button"
+      aria-label="เปิดโหมดมืด"
+    >
+      🌙 Dark Mode
+    </button>
+
+    <main class="hero">
+      <section>
+        <h1>เพื่อนตัวน้อยไม่ว่าจะ<br />ขนาดไหน</h1>
+        <p>
+          รู้จักสุนัขสายพันธุ์เล็ก กลาง และใหญ่ พร้อมเรียนรู้นิสัย การดูแล
+          และวิธีเลี้ยงให้เหมาะกับน้องหมาแต่ละสายพันธุ์
+        </p>
+
+        <!-- ปุ่มค้นหาสายพันธุ์ อยู่ด้านบน -->
+        <div class="hero-quiz">
+          <a href="quiz.html" class="btn-quiz">
+            ค้นหาสายพันธุ์ที่เหมาะกับคุณ
+          </a>
+        </div>
+
+        <!-- ปุ่มเลือกขนาดสุนัข อยู่แถวล่าง -->
+        <div class="hero-buttons">
+          <a href="breeds.html" class="btn btn-primary">
+            ดูสุนัขสายพันธุ์เล็ก
+          </a>
+
+          <a href="breeds.html" class="btn btn-outline">
+            ดูสุนัขสายพันธุ์กลาง
+          </a>
+
+          <a href="breeds.html" class="btn btn-primary">
+            ดูสุนัขสายพันธุ์ใหญ่
+          </a>
+        </div>
+      </section>
+      <div class="hero-art">
+        <div class="shadow" aria-hidden="true"></div>
+        <img src="dogindex.png" alt="ลูกสุนัข" />
+      </div>
+    </main>
+
+    <section class="popular" aria-labelledby="popular-title">
+      <div class="popular-inner">
+        <h2 class="section-title" id="popular-title">
+          10 พันธุ์หมาที่นิยมเลี้ยงปี 2026
+        </h2>
+        <p class="page-intro">
+          มาดูกันว่า 10 พันธุ์หมาที่นิยมเลี้ยงในปี 2026
+          มีสายพันธุ์ไหนน่าสนใจบ้าง และแต่ละพันธุ์เหมาะกับไลฟ์สไตล์แบบไหน
+        </p>
+
+        <div class="breed-card">
+          <div class="card-img">
+            <img src="fenblue.jpg" alt="เฟรนช์บูลด็อก" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <span class="tag">พันธุ์เล็ก</span>
+            <h3>เฟรนช์บูลด็อก</h3>
+            <p>
+              เป็นน้องหมาขนาดเล็ก เป็นเอกลักษณ์ทั้งใบหน้าสั้น หูตั้ง
+              และรูปร่างกะทัดรัด จึงเป็นสายพันธุ์ที่ได้รับความนิยม
+              ควรเลี้ยงภายในบ้านที่มีอากาศถ่ายเทและระวังเรื่องอากาศร้อน
+              รวมถึงการออกกำลังกายที่หนักเกินไป
+            </p>
+          </div>
+        </div>
+
+        <div class="breed-card">
+          <div class="card-img">
+            <img src="Dachshund.jpg" alt="ดัชชุน" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <span class="tag">พันธุ์เล็ก</span>
+            <h3>ดัชชุน</h3>
+            <p>
+              เป็นสุนัขที่มีเอกลักษณ์จากลำตัวยาวและขาสั้น มีทั้งแบบขนสั้น ขนยาว
+              และขนหยาบ ทำให้เลือกได้ตามความชอบ น้องดัชชุนเป็นสุนัขขนาดเล็ก
+              ที่มีพลังงานสูง มีความกระตือรือร้นและชอบสำรวจสิ่งต่าง ๆ รอบตัว
+              ที่สำคัญคือดัชชุนเป็นสายพันธุ์อินดี้
+              มีความเป็นตัวเองสูงมากและขี้อ้อนมาก ๆ
+            </p>
+          </div>
+        </div>
+
+        <div class="breed-card">
+          <div class="card-img">
+            <img src="putdle.jpg" alt="พุดเดิ้ล" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <span class="tag">พันธุ์เล็ก</span>
+            <h3>พุดเดิ้ล</h3>
+            <p>
+              น้องมีความฉลาดเป็นอย่างมาก เรียนรู้ไว
+              พูดรู้เรื่องและสามารถฝึกได้ดี
+              นอกจากนี้ยังมีขนลักษณะเฉพาะที่ผลัดขนน้อยกว่าสุนัขหลายสายพันธุ์
+              แต่ยังต้องดูแลและตัดแต่งขนอย่างสม่ำเสมอ
+            </p>
+          </div>
+        </div>
+
+        <div class="breed-card">
+          <div class="card-img">
+            <img src="Golden-Retriever.jpg" alt="โกลเด้น" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <span class="tag">พันธุ์ใหญ่</span>
+            <h3>โกลเด้น รีทรีฟเวอร์</h3>
+            <p>
+              เป็นน้องหมาขนาดกลางถึงใหญ่ที่ได้รับความนิยมอย่างต่อเนื่อง
+              ด้วยนิสัยเป็นมิตร ร่าเริง เข้ากับคนได้ง่าย
+              และยังเป็นสุนัขที่ชอบกิจกรรมและต้องการการออกกำลังกายอย่างเหมาะสม
+            </p>
+          </div>
+        </div>
+
+        <div class="breed-card">
+          <div class="card-img">
+            <img src="labador.jpg" alt="ลาบาดอ" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <span class="tag">พันธุ์ใหญ่</span>
+            <h3>ลาบราดอร์ รีทรีฟเวอร์</h3>
+            <p>
+              เป็นสุนัขที่มีนิสัยเป็นมิตร ฉลาด กระตือรือร้น
+              และเป็นพันธุ์ที่ต้องการการออกกำลังกายค่อนข้างมาก
+              และชอบกิจกรรมที่ได้ใช้พลังงาน
+              หากเลี้ยงภายในบ้านควรมีเวลาให้เดินเล่นหรือทำกิจกรรมเป็นประจำ
+            </p>
+          </div>
+        </div>
+
+        <div class="breed-card">
+          <div class="card-img">
+            <img src="corgi.jpg" alt="คอกี้" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <span class="tag">พันธุ์กลาง</span>
+            <h3>คอกี้</h3>
+            <p>
+              เป็นน้องหมาขนาดกลางที่โดดเด่นด้วยขาสั้น ลำตัวยาว และหูตั้ง
+              รูปลักษณ์น่ารักทำให้เป็นอีกสายพันธุ์ที่ได้รับความนิยม
+              คอกี้เป็นน้องหมาขาสั้น แต่ค่อนข้างกระตือรือร้นและมีพลังงานสูง
+              ชอบเล่นและต้องการกิจกรรมเพื่อใช้พลังงาน
+            </p>
+          </div>
+        </div>
+
+        <div class="breed-card">
+          <div class="card-img">
+            <img
+              src="cavalier_king_charles_spaniel.jpg"
+              alt="คาวา"
+              loading="lazy"
+            />
+          </div>
+          <div class="card-content">
+            <span class="tag">พันธุ์เล็ก</span>
+            <h3>คาวาเลียร์ คิง ชาลส์ สแปเนียล</h3>
+            <p>
+              เป็นสุนัขขนาดเล็กที่มีรูปลักษณ์อ่อนหวาน ขนยาวนุ่ม
+              และมีนิสัยเป็นมิตร
+              จึงเป็นอีกสายพันธุ์ที่เหมาะกับการเลี้ยงเป็นเพื่อนคู่ใจ
+              น้องมักชอบอยู่ใกล้เจ้าของและเข้ากับคนได้ดี
+              จึงเหมาะกับคนที่ต้องการสุนัขที่สามารถใช้ชีวิตร่วมกันภายในบ้านได้
+            </p>
+          </div>
+        </div>
+
+        <div class="breed-card">
+          <div class="card-img">
+            <img src="chivava.jpg" alt="ชิวาวา" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <span class="tag">พันธุ์เล็ก</span>
+            <h3>ชิวาวา</h3>
+            <p>
+              เป็นหนึ่งในสุนัขสายพันธุ์ที่มีขนาดเล็กที่สุด
+              มีทั้งแบบขนสั้นและขนยาว และมีบุคลิกที่โดดเด่นเกินตัว แม้จะตัวเล็ก
+              แต่ชิวาวาสามารถมีความกระตือรือร้นและกล้าแสดงออก
+              บางตัวมีความผูกพันกับเจ้าของสูงและอาจค่อนข้างระแวดระวังคนแปลกหน้า
+            </p>
+          </div>
+        </div>
+
+        <div class="breed-card">
+          <div class="card-img">
+            <img src="shisu.jpg" alt="ชิสุ" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <span class="tag">พันธุ์เล็ก</span>
+            <h3>ชิสุ</h3>
+            <p>
+              เป็นสุนัขขนาดเล็กที่มีขนยาวสวยและมีบุคลิกเป็นมิตร
+              จึงได้รับความนิยมในกลุ่มคนที่ชอบสุนัขขนาดกะทัดรัด
+              ชิสุสามารถใช้ชีวิตภายในบ้านได้ดี
+              และไม่ได้ต้องการการออกกำลังกายหนักเท่าสุนัขที่มีพลังงานสูง
+              แต่ต้องให้ความสำคัญกับการดูแลขนและความสะอาด
+            </p>
+          </div>
+        </div>
+
+        <div class="breed-card">
+          <div class="card-img">
+            <img src="pom.jpg" alt="ปอม" loading="lazy" />
+          </div>
+          <div class="card-content">
+            <span class="tag">พันธุ์เล็ก</span>
+            <h3>ปอมเมอเรเนียน</h3>
+            <p>
+              เป็นสุนัขตัวเล็กที่มีขนฟูและใบหน้าที่ดูสดใส
+              มีบุคลิกกระตือรือร้นและชอบมีส่วนร่วมกับเจ้าของ แม้จะมีขนาดตัวเล็ก
+              แต่ปอมเมอเรเนียนเป็นสุนัขที่มีพลังและสามารถซนได้ไม่น้อย
+              เจ้าของจึงควรจัดเวลาให้เล่นและทำกิจกรรมอย่างเหมาะสม
+            </p>
+          </div>
+        </div>
+
+        <div class="actions popular-actions">
+          <a class="btn btn-primary" href="breeds.html">หน้าถัดไป</a>
+        </div>
+      </div>
+    </section>
+    <footer class="site-footer">© 2026 Good Good Dog</footer>
+    <script src="script.js"></script>
+  </body>
+</html>

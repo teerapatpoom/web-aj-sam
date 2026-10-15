@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>หาสายพันธุ์ที่เหมาะกับคุณ | Good Good Dog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600&family=Noto+Sans+Thai:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="quiz.html">
+    <div id="site-header"></div>
+    <main class="quiz-page">
+      <header class="quiz-heading">
+        <h1>น้องหมาแบบไหนที่เหมาะกับคุณ?</h1>
+        <p>
+          ตอบคำถามสั้น ๆ เกี่ยวกับที่อยู่อาศัย เวลาว่าง และสไตล์การเลี้ยง
+          แล้วเราจะช่วยแนะนำสายพันธุ์ที่น่าจะเข้ากับคุณ
+        </p>
+      </header>
+      <section class="popular" aria-labelledby="popular-title">
+        <form id="dogQuiz" class="quiz-form">
+          <fieldset class="quiz-question">
+            <h2>1. คุณอาศัยอยู่ที่ไหน?</h2>
+            <div class="quiz-options">
+              <label class="quiz-option"
+                ><input type="radio" name="home" value="condo" required />
+                คอนโดหรือหอพักที่อนุญาตให้เลี้ยงสัตว์</label
+              >
+              <label class="quiz-option"
+                ><input type="radio" name="home" value="house" />
+                บ้านหรือทาวน์เฮาส์</label
+              >
+              <label class="quiz-option"
+                ><input type="radio" name="home" value="yard" />
+                บ้านที่มีพื้นที่สนามหรือสวน</label
+              >
+            </div>
+          </fieldset>
+          <fieldset class="quiz-question">
+            <h2>2. คุณมีเวลาออกกำลังกายหรือเล่นกับน้องหมาแค่ไหน?</h2>
+            <div class="quiz-options">
+              <label class="quiz-option"
+                ><input type="radio" name="time" value="low" required />
+                วันละนิดหน่อย เน้นกิจกรรมเบา ๆ</label
+              >
+              <label class="quiz-option"
+                ><input type="radio" name="time" value="medium" /> วันละประมาณ
+                30–60 นาที</label
+              >
+              <label class="quiz-option"
+                ><input type="radio" name="time" value="high" /> มีเวลาเยอะ
+                ชอบเดิน วิ่ง หรือทำกิจกรรม</label
+              >
+            </div>
+          </fieldset>
+          <fieldset class="quiz-question">
+            <h2>3. คุณชอบนิสัยสุนัขแบบไหน?</h2>
+            <div class="quiz-options">
+              <label class="quiz-option"
+                ><input type="radio" name="personality" value="calm" required />
+                ใจเย็น ชอบพักผ่อน อยู่เป็นเพื่อน</label
+              >
+              <label class="quiz-option"
+                ><input type="radio" name="personality" value="friendly" />
+                เป็นมิตร ขี้เล่น เข้ากับคนง่าย</label
+              >
+              <label class="quiz-option"
+                ><input type="radio" name="personality" value="smart" /> ฉลาด
+                ชอบฝึกและเรียนรู้</label
+              >
+              <label class="quiz-option"
+                ><input type="radio" name="personality" value="independent" />
+                รักอิสระ มีความเป็นตัวเอง</label
+              >
+            </div>
+          </fieldset>
+          <fieldset class="quiz-question">
+            <h2>4. คุณสะดวกดูแลขนมากแค่ไหน?</h2>
+            <div class="quiz-options">
+              <label class="quiz-option"
+                ><input type="radio" name="grooming" value="low" required />
+                อยากได้ขนที่ดูแลง่าย แปรงไม่บ่อย</label
+              >
+              <label class="quiz-option"
+                ><input type="radio" name="grooming" value="medium" />
+                ดูแลได้สัปดาห์ละหลายครั้ง</label
+              >
+              <label class="quiz-option"
+                ><input type="radio" name="grooming" value="high" />
+                ยินดีแปรงและตัดแต่งขนเป็นประจำ</label
+              >
+            </div>
+          </fieldset>
+          <fieldset class="quiz-question">
+            <h2>5. คุณเคยเลี้ยงสุนัขมาก่อนหรือไม่?</h2>
+            <div class="quiz-options">
+              <label class="quiz-option"
+                ><input type="radio" name="experience" value="new" required />
+                ยังไม่เคย เป็นผู้เลี้ยงมือใหม่</label
+              >
+              <label class="quiz-option"
+                ><input type="radio" name="experience" value="some" />
+                เคยเลี้ยงหรือมีความรู้เรื่องสุนัขบ้าง</label
+              >
+              <label class="quiz-option"
+                ><input type="radio" name="experience" value="experienced" />
+                มีประสบการณ์และพร้อมฝึกสุนัข</label
+              >
+            </div>
+          </fieldset>
+          <p id="quizError" class="quiz-error" role="alert" hidden>
+            กรุณาตอบคำถามให้ครบทุกข้อก่อนดูผลลัพธ์
+          </p>
+          <button class="btn btn-primary quiz-submit" type="submit">
+            ค้นหาสายพันธุ์ที่เหมาะกับฉัน
+          </button>
+        </form>
+      </section>
+      <section id="quizResults" class="quiz-results" aria-live="polite" hidden>
+        <h2>สายพันธุ์ที่น่าจะเหมาะกับคุณ</h2>
+        <p class="quiz-result-intro">
+          ผลลัพธ์นี้คำนวณจากคำตอบของคุณ เป็นแนวทางช่วยเลือกเบื้องต้น
+          ควรพิจารณานิสัยของสุนัขแต่ละตัวและความพร้อมในการดูแลร่วมด้วย
+        </p>
+        <div id="quizResultList" class="quiz-result-list"></div>
+        <p class="quiz-note">
+          หมายเหตุ: ไม่มีสายพันธุ์ใดเหมาะกับทุกคน
+          สุนัขแต่ละตัวอาจมีนิสัยและความต้องการแตกต่างกัน
+        </p>
+      </section>
+    </main>
+    <footer class="site-footer">© 2026 Good Good Dog</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
